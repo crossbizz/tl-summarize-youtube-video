@@ -70,14 +70,14 @@ export async function fetchVideoInfo(queryClient, url) {
 
 export function useGenerateSummary(data, videoId, enabled) {
   return useQuery({
-    queryKey: [keys.VIDEOS, "summarize", videoId],
+    queryKey: [keys.VIDEOS, "generate", videoId],
     queryFn: async () => {
       if (!enabled) {
         return null;
       }
 
       const response = await apiConfig.SERVER.post(
-        `/videos/${videoId}/summarize`,
+        `/videos/${videoId}/generate`,
         { data }
       );
       const respData = response.data;
@@ -89,14 +89,14 @@ export function useGenerateSummary(data, videoId, enabled) {
 
 export function useGenerateChapters(data, videoId, enabled) {
   return useQuery({
-    queryKey: [keys.VIDEOS, "chapters", videoId],
+    queryKey: [keys.VIDEOS, "generate", videoId],
     queryFn: async () => {
       if (!enabled) {
         return null;
       }
 
       const response = await apiConfig.SERVER.post(
-        `/videos/${videoId}/summarize`,
+        `/videos/${videoId}/generate`,
         { data }
       );
       const respData = response.data;
@@ -108,14 +108,14 @@ export function useGenerateChapters(data, videoId, enabled) {
 
 export function useGenerateHighlights(data, videoId, enabled) {
   return useQuery({
-    queryKey: [keys.VIDEOS, "highlights", videoId],
+    queryKey: [keys.VIDEOS, "generate", videoId],
     queryFn: async () => {
       if (!enabled) {
         return null;
       }
 
       const response = await apiConfig.SERVER.post(
-        `/videos/${videoId}/summarize`,
+        `/videos/${videoId}/generate`,
         { data }
       );
       const respData = response.data;
