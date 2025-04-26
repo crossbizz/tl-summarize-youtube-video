@@ -12,10 +12,15 @@ import { ErrorBoundary } from "./ErrorBoundary";
 import WarningIcon from "./Warning.svg";
 import greenWarningIcon from "./Warning_Green.svg";
 
-/** Summarize a Video App
+/**
+ * Renders the main interface for summarizing a YouTube video, including video upload, playback, prompt input, and result display.
  *
- * App -> SummarizeVideo -> {VideoUrlUploadForm, Video, InputForm, Result}
+ * Integrates video upload, video display, prompt forms, and summary results into a single workflow for users to generate summaries, chapters, or highlights from a selected video.
  *
+ * @param {Object} props
+ * @param {number} props.index - Index of the video in the list or collection.
+ * @param {string} props.videoId - Unique identifier for the selected video.
+ * @param {Function} props.refetchVideos - Callback to refresh the list of available videos after upload or changes.
  */
 
 export function SummarizeVideo({ index, videoId, refetchVideos }) {

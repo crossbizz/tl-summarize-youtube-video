@@ -11,10 +11,17 @@ import {
 import keys from "./keys";
 import { ErrorBoundary } from "./ErrorBoundary";
 
-/** Shows the results
+/**
+ * Displays video analysis results including summary, chapters, and highlights based on user prompts and submission status.
  *
- * SummarizeVideo -> {Result} -> Video
+ * Renders sections for summary, chapters, and highlights if their respective prompts are provided and the form is submitted. Each section shows loading indicators while data is being fetched and displays results when available.
  *
+ * @param {Object} props - Component props.
+ * @param {Object} props.video - The video object to display results for.
+ * @param {boolean} props.isSubmitted - Indicates if the form has been submitted.
+ * @param {Object} props.field1Prompt - Prompt configuration for summary generation.
+ * @param {Object} props.field2Prompt - Prompt configuration for chapters generation.
+ * @param {Object} props.field3Prompt - Prompt configuration for highlights generation.
  */
 
 export function Result({
