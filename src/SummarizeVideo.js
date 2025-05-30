@@ -22,7 +22,7 @@ export function SummarizeVideo({ index, videoId, refetchVideos }) {
   const { data: video, isLoading } = useGetVideo(
     index,
     videoId,
-    Boolean(videoId)
+    
   );
 
   const [field1, field2, field3] = ["summary", "chapter", "highlight"];

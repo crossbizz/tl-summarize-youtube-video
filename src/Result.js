@@ -45,9 +45,7 @@ export function Result({
     queryClient.invalidateQueries([
       keys.VIDEOS,
       video?._id,
-      "summarize",
-      "chapters",
-      "highlights",
+      "generate"
     ]);
   }, [field1Prompt?.type, field2Prompt?.type, field3Prompt?.type]);
 
